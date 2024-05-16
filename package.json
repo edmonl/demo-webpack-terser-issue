@@ -1,0 +1,18 @@
+{
+  "name": "demo-webpack-terser-issue",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "webpack build"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=9"
+  },
+  "author": "Meng",
+  "devDependencies": {
+    "terser-webpack-plugin": "^5.3.10",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
