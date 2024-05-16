@@ -1,5 +1,7 @@
 # Build
-Run `npm install` to install dev dependencies. Run `npm run build` to bundle with webpack. The bundled output is `dist/index.js`.
+Run `npm ci` to install dev dependencies. Run `npm run build` to bundle with webpack. The bundled output is `dist/index.js`.
+
+Contrived dependencies are put into `modules` for demonstration purposes, and this is necessary to trigger the minification bug. In real projects, dependencies in `modules` should be installed by `npm` and put into `node_modules`.
 
 # Run
 Though the bundle is targeted to browers, it also can be run in Node.js. Simply run `node dist`.
@@ -13,5 +15,3 @@ Change `mode: 'production'` to `mode: 'development'` in `webpack.config.js`, and
 Properties in JSON are mangled, but the names from JSON in destructuring assignment are not.
 
 The comments in `webpack.config.js` show some attempts to stop mangling in JSON but did not work.
-
-In reality, packages in `modules` should be installed by `npm` and put into `node_modules` as dependencies. Here dependencies are put into `modules` for demonstration purposes, and this is necessary to trigger the minification bug.
